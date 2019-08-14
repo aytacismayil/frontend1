@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+    <!-- <script src="./contentSignUp/firebaseSignUpNext.js"></script> -->
+    <style>
+       body {
+           /* background-color: black; */
+           color: black;
+           background: url(./images/workhome.jpg) no-repeat;
+           background-size: cover;
+           opacity: 0.8;
+       }
+
+        .cont {
+            height: 700px;
+            width: 80%;
+            background-color: lightgrey;
+            /* color: white; */
+            /* #F5F5DC; */
+            margin: 10px;
+            padding: 10px;
+            margin-left: 80px;
+            margin-top: 60px;
+
+        }
+
+        .selectwidthauto {
+            width: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier fluid cont">
+        <div class="row">
+            <div class="col-xl-12">
+                <br>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <label style="text-align: center"><strong>Choose a Web, Mobile & Software Dev category</strong> </label>
+
+            </div>
+            <div class="col-md-6">
+
+                <label style="text-align: center"><strong>What skills and expertise are most important to you?</strong>
+                </label>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class=" col-md-6 ">
+                <select class="form-control" id="sel2">
+                    <option></option>
+                    <option value="Back-End">Back-End Development</option>
+                    <option>AR/VR Development
+                    </option>
+                    <option>Automation QA</option>
+                    <option>CMS Customization</option>
+                    <option>CMS Development</option>
+                    <option>CMS Customization</option>
+                    <option>Desktop Software Development</option>
+                    <option value="Front-End">Front-End Development</option>
+                    <option>Ecommerce Development</option>
+                    <option>Emerging Tech</option>
+                    <option>Firmware Development</option>
+                    <option>Full Stack Development</option>
+                    <option>Functional QA</option>
+                    <option value="Game">Game Development</option>
+                    <option>Mobile App Development</option>
+                    <option>Mobile Design</option>
+                    <option>Mobile Game Development</option>
+                    <option>Product Management</option>
+                    <option>Prototyping</option>
+                    <option>Scripting &amp; Automation</option>
+                    <option>Web Design</option>
+                    <option>User Researcht</option>
+                    <option>Software Development Tutoring</option>
+                    <option>User Researcht</option>
+                </select>
+            </div>
+
+            <div class=" col-md-6">
+                <div id="Back-End">
+                    <select id="Back-End" style="width:8000px" class="selectpicker form-control" multiple
+                        data-live-search="true">
+                        <option>C#</option>
+                        <option>Java</option>
+                        <option>C++</option>
+                        <option>Python</option>
+                        <option>Perl</option>
+                        <option>Ruby</option>
+                        <option>SQL</option>
+                        <option>Oracle</option>
+                        <option>Visual Basic</option>
+
+                    </select>
+                </div>
+                <div id="Front-End" style="display: none">
+                    <select id="Front-End" style="width:8000px" class="selectpicker form-control" multiple
+                        data-live-search="true">
+                        <option>CSS</option>
+                        <option>Html5</option>
+                        <option>Jquery</option>
+                        <option>Javascript</option>
+                        <option>Json</option>
+                        <option>React.js</option>
+                        <option>Boostrap</option>
+                        <option>Asp.net MVC</option>
+                        <option>Visual Basic</option>
+
+                    </select>
+                </div>
+                <div id="Game" style="display: none">
+                    <select id="Game" style="width:8000px" class="selectpicker form-control" multiple
+                        data-live-search="true">
+                        <option>C#</option>
+                        <option>Java</option>
+                        <option>C++</option>
+                        <option>Python</option>
+                        <option>Unreal</option>
+                        <option>Animation</option>
+                        <option>Rust</option>
+                        <option>Unity 3D</option>
+                        <option>UX</option>
+                        <option>VR</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>How long do you expect this project to last?</strong>
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <p><strong>Start Date</strong></p>
+                <input id="datepicker" width="270" />
+            </div>
+            <div class="col-md-4">
+                <p><strong>End Date</strong></p>
+                <input id="datepicker1" width="270" />
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>How would you like to pay your freelancer or agency? </strong>
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-2">
+                <select id="pay" class="form-control">
+                    <option>AZE</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>RUB</option>
+                    <option>CAD</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="money" class="form-control">
+                    <option>Moderate ($8 - 15 USD) per hour</option>
+                    <option>Basic ($2 - 8 USD) per hour</option>
+                    <option>Moderate ($8 - 15 USD) per hour</option>
+                    <option>Skilled ($25 - 50 USD) per hour</option>
+                    <option>Expert ($50 + USD) per hour</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Choose a name for your project</strong>
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-8">
+
+                <input id="nameProject" class="form-control">
+
+            </div>
+            <div class="col-md-4">
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <strong>Tell us more about your project</strong>
+
+                <p >(Start with a bit about yourself or your business, and include an overview of what you need done.)
+                </p>
+
+            </div>
+            <div class="col-md-2">
+                <!-- <textarea class = "form-control" rows = "3" placeholder = "Player Details"></textarea> -->
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <textarea id="aboutProject" class="form-control" placeholder="Player Details"></textarea>
+            </div>
+            <div class="col-md-2">
+
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+                <form>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2">
+
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-10">
+
+            </div>
+            <div class="col-md-2">
+                <!-- <button id="nextbtn">NExt</button> -->
+                <button type="submit" class="btn btn-info login100-form-btn form-control" id="nextbtn">Next</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+     
+        let val;
+      
+
+        $("#sel2").change(function () {
+            $('div[id]').hide();
+            $('#sel2').find(":selected").each(function () {
+                val = $(this).val();
+            });
+           
+            val = '#' + val;
+            $(val).show()
+
+            
+        })
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+        $('#datepicker1').datepicker({
+            uiLibrary: 'bootstrap'
+        });
+     
+        var firebaseConfig = {
+            apiKey: "AIzaSyCoxDOWlnMTD_lvC198Q_n699Vh1N3vcQE",
+            authDomain: "devdb-e2b11.firebaseapp.com",
+            databaseURL: "https://devdb-e2b11.firebaseio.com",
+            projectId: "devdb-e2b11",
+            storageBucket: "devdb-e2b11.appspot.com",
+            messagingSenderId: "353455750630",
+            appId: "1:353455750630:web:45198f5e973914f5"
+        };
+        // Initialize Firebase
+        var selected = [];
+        let string = ''
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        let usersDatas
+
+        database.ref("/usersDatas/").on("value",function(a){
+        if(a.val()==null){
+            usersDatas=[]
+        }
+        else{
+            usersDatas=a.val()
+        }
+        })
+        $('#nextbtn').on('click', function (e) {
+            e.preventDefault();
+
+            category = $('#sel2 option:selected').text()
+            datepickerStart = $('#datepicker').val()
+
+            datepickerLast = $('#datepicker1').val()
+            aboutProject=$('#aboutProject').text()
+            nameProject=$('#nameProject').val()
+
+            $(val).find("option:selected").each(function () {
+                var optionValue = $(this).val();
+                var optionText = $(this).text();
+
+                // collect all values
+                selected.push(optionValue);
+
+
+
+            });
+            string = selected.join(',')
+
+            pay = $('#pay option:selected').text()
+
+            money = $('#money option:selected').text()
+            
+
+
+            usersDatas.push({
+                user_id:localStorage.getItem('user_id'),
+                username:localStorage.getItem('username'),
+                password:localStorage.getItem('password'),
+                email:localStorage.getItem('email'),
+                usertype:localStorage.getItem('usertype'),
+                category: category,
+                languages: string,
+                dateTimeStart:datepickerStart,
+                dateTimeEnd:datepickerLast,
+                pay:pay,
+                money:money,
+                aboutProject:aboutProject,
+                nameProject:nameProject
+            })
+
+
+            database.ref().set({
+
+                usersDatas: usersDatas
+            })
+            window.open('./employer.html','_blank')
+            string=''
+
+        })
+    </script>
+</body>
+
+</html>
